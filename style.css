@@ -133,4 +133,34 @@ body {
 
 .content {
     animation: fadeIn 1s ease-out;
-}
+}/* 使logo容器居中 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 150px;
+    height: 150px;
+    animation: rotateLogo 5s linear infinite;
+  }
+  
+  /* 旋转动画 */
+  @keyframes rotateLogo {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
