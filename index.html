@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网站</title>
+    <!-- 引入外部样式表 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <h1>我的网站</h1>
+        <nav>
+            <a href="#home">首页</a>
+            <a href="#about">关于我们</a>
+            <a href="#contact">联系我们</a>
+        </nav>
+    </div>
+
+    <!-- 主内容区 -->
+    <div class="content" id="home">
+        <h2>欢迎来到我的网站！</h2>
+        <p>这是一个简单的网页示例，展示了如何使用 HTML 和 CSS 创建一个现代化的网页布局。</p>
+        <img src="images/molihua_logo.png" alt="茉莉花 Logo"> <!-- 这里替换为你自己的图片路径 -->
+    </div>
+
+    <div class="content" id="about">
+        <h2>关于我们</h2>
+        <p>我们致力于提供最优质的服务，并不断创新，以满足您的需求。</p>
+    </div>
+
+    <div class="content" id="contact">
+        <h2>联系我们</h2>
+        <p>如果您有任何问题或建议，欢迎随时联系我们：</p>
+        <ul>
+            <li>Email: example@example.com</li>
+            <li>电话: 123-456-7890</li>
+        </ul>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <p>&copy; 2024 我的网站. 版权所有.</p>
+        <p>更多信息请访问<a href="https://www.example.com" target="_blank">我们的网站</a></p>
+    </div>
+
+    <script>
+        // 简单的平滑滚动效果
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</h
